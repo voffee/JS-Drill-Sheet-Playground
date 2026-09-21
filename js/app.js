@@ -9,8 +9,15 @@ function createRange(start, end) {
 
 function createRangeWithStep(start, end, step) {
     return Array.from(
-        {length: (((end-start)/ 2) + 1)},
+        { length: (((end-start)/ 2) + 1) },
         (_, index) => index * step
+    );
+}
+
+function createCountdown(start, end) {
+    return Array.from(
+        { length: start - end + 1 }, 
+        (_, index) => start - index
     );
 }
 
