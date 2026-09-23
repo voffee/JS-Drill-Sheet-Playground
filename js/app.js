@@ -49,3 +49,9 @@ function objectTotal(data) {
 }
 
 console.log(objectTotal({ x:1, y: 2, y2: 3}));
+
+// goal is to turn obj into an array of strings, i.e. 'apple: 10', 'bear: 5', 'cat: 7'
+function turnObjectEntriesToString(passedData) {
+    return Object.entries(passedData).map(([key, value]) => `${key}: ${value}`);
+}
+
