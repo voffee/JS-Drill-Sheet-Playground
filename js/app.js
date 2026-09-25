@@ -48,7 +48,7 @@ function objectTotal(data) {
     return (total);
 }
 
-console.log(objectTotal({ x:1, y: 2, y2: 3}));
+// console.log(objectTotal({ x:1, y: 2, y2: 3}));
 
 // Goal is to turn obj into an array of strings, i.e. 'apple: 10', 'bear: 5', 'cat: 7'
 function turnObjectEntriesToString(passedData) {
@@ -75,4 +75,16 @@ function matchText(word) {
     };
 }
 
-console.log(items.find(matchText('plain')));
+// console.log(items.find(matchText('cow')));
+
+function filterByMin(min) {
+    return (x) => x.value > min;
+}
+
+// console.log(items.filter(filterByMin(3)));
+
+function filterByMax(max) {
+    return (x) => x.value < max;
+}
+
+console.log(items.filter(filterByMax(3)));
