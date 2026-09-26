@@ -70,12 +70,12 @@ const hasTarget3 = (passedData) => passedData.text.includes('target');
 
 // Factory Pattern  - parameterized + reusable
 function matchText(word) {
-    return function(passedData) {
-        return passedData.text.includes(word);
+    return function(item) {
+        return item.text.includes(word);
     };
 }
 
-// console.log(items.find(matchText('cow')));
+console.log(items.find(matchText('text')));
 
 function filterByMin(min) {
     return (x) => x.value > min;
@@ -117,3 +117,6 @@ console.log(toStr);
 
 const wordCount = items.map(passedData => passedData.text.split('').length);
 console.log(wordCount);
+
+const matchedText = items.filter(filterByMin(2)).map(passedData => passedData.text);
+console.log(matchedText);
