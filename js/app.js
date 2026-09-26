@@ -81,10 +81,27 @@ function filterByMin(min) {
     return (x) => x.value > min;
 }
 
-// console.log(items.filter(filterByMin(3)));
+console.log(items.filter(filterByMin(99)));
 
 function filterByMax(max) {
     return (x) => x.value < max;
 }
 
-console.log(items.filter(filterByMax(3)));
+// console.log(items.filter(filterByMax(3)));
+
+// console.log(Object.values(obj).some(value => value >= 3));
+// console.log(Object.values(obj).every(value => value >= 6));
+
+// console.log([].some(x => true));
+// console.log([].every(x => false));
+
+const shouted = arr.map(value => value.toUpperCase());
+console.log(shouted);
+
+const values = items.map(item => item.value);
+console.log(values);
+
+const summaries = items.map(
+    item => `${item.text} (${item.value})`
+);
+console.log(summaries);
