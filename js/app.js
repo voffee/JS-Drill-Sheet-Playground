@@ -105,3 +105,15 @@ const summaries = items.map(
     item => `${item.text} (${item.value})`
 );
 console.log(summaries);
+
+const justVal = items.map(passedData => passedData.value);
+console.log(justVal);
+
+const toStr = items.map(passedData => `${passedData.text} (${passedData.value})`
+
+);
+
+console.log(toStr);
+
+const wordCount = items.map(passedData => passedData.text.split('').length);
+console.log(wordCount);
