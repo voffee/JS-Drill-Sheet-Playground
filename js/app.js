@@ -135,3 +135,13 @@ const testFactory = makeValidator(15);
 
 const exampleTest = items.filter(testFactory);
 console.log(exampleTest);
+
+function makeCounter() {
+    let count = 0;
+    return () => count = count + 1
+}
+
+const counterTest = makeCounter();
+console.log(counterTest());
+console.log(counterTest());
+console.log(counterTest());
