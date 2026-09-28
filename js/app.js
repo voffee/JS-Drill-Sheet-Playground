@@ -120,3 +120,18 @@ console.log(wordCount);
 
 const matchedText = items.filter(filterByMin(2)).map(passedData => passedData.text);
 console.log(matchedText);
+
+function makeValidator(minLength) {
+    return function(item) {
+        return item.text.length >= minLength;
+    };
+}
+
+const longEnough = items.filter(makeValidator(15));
+
+console.log(longEnough);
+
+const testFactory = makeValidator(15);
+
+const exampleTest = items.filter(testFactory);
+console.log(exampleTest);
